@@ -5,10 +5,11 @@ services:
     image: gsong/djangogirls-starter
     container_name: djangogirls_tutorial
     environment:
-      PORT: ${APP_PORT:-8080}
+      PORT: ${APP_PORT:-8000}
+    command: ./manage.py runserver 0.0.0.0:8000
     volumes:
       - ./.data/services/app/bash_history:/root/.bash_history
       - ./.data/services/app/ipython/:/root/.ipython
       - .:/app
     ports:
-      - "${APP_PORT:-8080}:${APP_PORT:-8080}"
+      - "${APP_PORT:-8000}:${APP_PORT:-8000}"
