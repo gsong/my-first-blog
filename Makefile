@@ -9,16 +9,13 @@ help: ## Display this help message
 
 # Tasks to be run in developer shell
 ## Python requirements
-compile-requirements: ## Compile Python requirements without upgrading
+compile-requirements: # Compile Python requirements without upgrading
 	docker-compose run --rm --no-deps app make pip-compile
 
-upgrade-requirements: ## Compile and upgrade Python requirements
+upgrade-requirements: # Compile and upgrade Python requirements
 	docker-compose run --rm --no-deps app make pip-compile-upgrade
 
 ## General Docker operations
-build: ## Build image
-	docker-compose build --pull
-
 up: # Start environment
 	docker-compose up -d
 
@@ -33,4 +30,10 @@ shell: ## Start app server shell
 ps: ## View environment containers
 	docker-compose ps
 
-setup: build up ps ## Set up development environment
+build: # Build image
+	docker build -t gsong/djangogirls-starter .
+
+pull: # Pull latest image from Docker Hub
+	docker-compose pull
+
+setup: pull up ps # Set up development environment
