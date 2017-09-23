@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  app:
+    build:
+      context: .
+    image: gsong/djangogirls-starter
+    container_name: djangogirls_tutorial
+    environment:
+      PORT: ${APP_PORT:-8080}
+    volumes:
+      - ./.data/services/kiwi/bash_history:/root/.bash_history
+      - ./.data/services/kiwi/ipython/:/root/.ipython
+      - .:/app
+    ports:
+      - "${APP_PORT:-8080}:${APP_PORT:-8080}"
