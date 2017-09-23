@@ -16,19 +16,11 @@ upgrade-requirements: # Compile and upgrade Python requirements
 	docker-compose run --rm --no-deps app make pip-compile-upgrade
 
 ## General Docker operations
-up: # Start environment
-	docker-compose up -d
+up: ## Start Django development server
+	docker-compose up
 
-down: ## Destroy environment
-	docker-compose down
-
-restart: down up ps ## Restart environment
-
-shell: ## Start app server shell
+shell: ## Start development shell
 	docker-compose run --rm app /bin/bash
-
-ps: ## View environment containers
-	docker-compose ps
 
 build: # Build image
 	docker build -t gsong/djangogirls-starter .
