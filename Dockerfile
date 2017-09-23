@@ -6,6 +6,11 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   && rm -rf /var/lib/apt/lists/*
 RUN echo 'source /usr/share/bash-completion/bash_completion' >> /etc/bash.bashrc
 
+RUN cd /etc/bash_completion.d/ \
+  && curl -SLO https://rawgit.com/django/django/stable/1.11.x/extras/django_bash_completion
+
+RUN echo 'export HISTFILE=$HOME/.bash_history/history' >> $HOME/.bashrc
+
 WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt && rm -rf /root/.cache
