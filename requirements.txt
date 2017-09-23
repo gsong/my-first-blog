@@ -8,6 +8,7 @@ decorator==4.1.2          # via ipython, traitlets
 django==1.11.5
 ipython-genutils==0.2.0   # via traitlets
 ipython==6.2.0
+isort==4.2.15
 jedi==0.11.0              # via ipython
 parso==0.1.0              # via jedi
 pexpect==4.2.1            # via ipython
