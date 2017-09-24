@@ -11,7 +11,7 @@ RUN cd /etc/bash_completion.d/ \
 
 RUN echo 'export HISTFILE=$HOME/.bash_history/history' >> $HOME/.bashrc
 
-WORKDIR /app
+WORKDIR /root/src/djangogirls
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt && rm -rf /root/.cache
 

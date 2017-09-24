@@ -9,8 +9,9 @@ services:
     command: ./manage.py runserver 0.0.0.0:8000
     volumes:
       - ${GITCONFIG:-~/.gitconfig}:/root/.gitconfig
+      - ${HOME}/Desktop:/root/Desktop:ro
       - ./.data/services/app/bash_history:/root/.bash_history
       - ./.data/services/app/ipython/:/root/.ipython
-      - .:/app
+      - .:/root/src/djangogirls
     ports:
       - "${APP_PORT:-8000}:${APP_PORT:-8000}"
