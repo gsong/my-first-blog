@@ -3,6 +3,7 @@ ENV PYTHONUNBUFFERED 1
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
   bash-completion \
+  tree \
   && rm -rf /var/lib/apt/lists/*
 RUN echo 'source /usr/share/bash-completion/bash_completion' >> /etc/bash.bashrc
 
