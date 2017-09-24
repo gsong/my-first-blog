@@ -4,9 +4,9 @@ services:
   app:
     image: gsong/djangogirls-app
     container_name: djangogirls-app
+    env_file: .env
     command: ./manage.py runserver 0.0.0.0:${APP_PORT:-8000}
     volumes:
-      - ${GITCONFIG:-~/.gitconfig}:/root/.gitconfig
       - ${HOME}/Desktop:/root/Desktop:ro
       - ./.data/services/app/bash_history:/root/.bash_history
       - ./.data/services/app/ipython/:/root/.ipython

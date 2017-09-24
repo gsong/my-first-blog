@@ -2,6 +2,7 @@
 *~
 .DS_Store
 .data
+.env
 /static
 __pycache__
 db.sqlite3

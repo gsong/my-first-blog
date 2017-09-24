@@ -13,7 +13,7 @@ runserver: ## Start Django development server
 	docker-compose up
 
 cli: ## Start development command line interface
-	docker-compose run --rm app /bin/bash
+	docker-compose run --rm app bin/cli-command.sh
 
 build: # Build image
 	docker build -t gsong/djangogirls-app .
