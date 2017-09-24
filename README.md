@@ -3,6 +3,10 @@
 In order to simplify the environment setup for Django Girls workshops, let's use
 Docker to set up most of our development environment.
 
+**Caveat**: These instructions have been tested thoroughly on macOS, and should
+work just as well on most Linux based systems. Feel free to experiment with
+Windows and make pull requests or suggestions.
+
 
 ## Installation
 
@@ -184,7 +188,7 @@ more powerful. To use it, just type `ipython` in place of `python` or `python3`.
 
 ### Autocompletion
 
-Since CLI commands are sometimes complex and are prone to typos, we use
+Since CLI commands are sometimes complex and prone to typos, we use
 autocompletion to help us with the task. To use autocomplete, simply press the
 `TAB` key, and your computer will make suggestions.
 
