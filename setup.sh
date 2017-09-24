@@ -4,7 +4,7 @@ echo "What's your GitHub username?"
 read -r github_username
 
 mkdir -p "${TUTORIAL_HOME}"
-cd "${TUTORIAL_HOME}" || exit
+cd "${TUTORIAL_HOME}" || return
 
 docker run --rm -v "${PWD}":/root/src/djangogirls \
   gsong/djangogirls-app \
