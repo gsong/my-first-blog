@@ -8,18 +8,11 @@ help: ## Display this help message
 	@perl -nle'print $& if m{^[\.a-zA-Z_-]+:.*?## .*$$}' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m  %-25s\033[0m %s\n", $$1, $$2}'
 
 # Tasks to be run in developer shell
-## Python requirements
-compile-requirements: # Compile Python requirements without upgrading
-	docker-compose run --rm --no-deps app make pip-compile
-
-upgrade-requirements: # Compile and upgrade Python requirements
-	docker-compose run --rm --no-deps app make pip-compile-upgrade
-
 ## General Docker operations
-up: ## Start Django development server
+runserver: ## Start Django development server
 	docker-compose up
 
-shell: ## Start development shell
+cli: ## Start development command line interface
 	docker-compose run --rm app /bin/bash
 
 build: # Build image
@@ -28,4 +21,9 @@ build: # Build image
 pull: # Pull latest image from Docker Hub
 	docker-compose pull
 
-setup: pull up ps # Set up development environment
+## Python requirements
+compile-requirements: # Compile Python requirements without upgrading
+	docker-compose run --rm --no-deps app make pip-compile
+
+upgrade-requirements: # Compile and upgrade Python requirements
+	docker-compose run --rm --no-deps app make pip-compile-upgrade
