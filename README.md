@@ -1,6 +1,6 @@
 # Docker Based Django Girls Tutorial Starter
 
-In order to simplify the environment setup for Django Girls workshops, let's use
+In order to simplify the setup for [Django Girls workshops][tutorial], let's use
 Docker to set up most of our development environment.
 
 **Caveat**: These instructions have been tested thoroughly on macOS, and should
