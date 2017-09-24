@@ -2,11 +2,9 @@ version: '3.3'
 
 services:
   app:
-    image: gsong/djangogirls-starter
-    container_name: djangogirls_tutorial
-    environment:
-      PORT: ${APP_PORT:-8000}
-    command: ./manage.py runserver 0.0.0.0:8000
+    image: gsong/djangogirls-app
+    container_name: djangogirls-app
+    command: ./manage.py runserver 0.0.0.0:${APP_PORT:-8000}
     volumes:
       - ${GITCONFIG:-~/.gitconfig}:/root/.gitconfig
       - ${HOME}/Desktop:/root/Desktop:ro

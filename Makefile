@@ -16,7 +16,7 @@ cli: ## Start development command line interface
 	docker-compose run --rm app /bin/bash
 
 build: # Build image
-	docker build -t gsong/djangogirls-starter .
+	docker build -t gsong/djangogirls-app .
 
 pull: # Pull latest image from Docker Hub
 	docker-compose pull

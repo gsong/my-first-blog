@@ -6,6 +6,6 @@ read -r github_username
 mkdir -p "${TUTORIAL_HOME}"
 cd "${TUTORIAL_HOME}" || exit
 
-docker run --rm -v "${PWD}":/app \
-  gsong/djangogirls-starter \
+docker run --rm -v "${PWD}":/root/src/djangogirls \
+  gsong/djangogirls-app \
   git clone https://github.com/"${github_username}"/my-first-blog.git .
