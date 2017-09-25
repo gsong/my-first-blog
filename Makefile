@@ -16,6 +16,7 @@ cli: ## Start development command line interface
 	docker-compose run --rm app bin/cli-command.sh
 
 build: # Build image
+	docker pull python:3.6-alpine
 	docker build -t gsong/djangogirls-app .
 
 pull: # Pull latest image from Docker Hub
