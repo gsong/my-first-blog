@@ -74,7 +74,7 @@ Instead of the prompt you see in the tutorial instructions:
 You'll instead see:
 
 ```sh
-root@app:~/src/djangogirls#
+root@app:~/src/djangogirls$
 ```
 
 #### Run Django Web Server
