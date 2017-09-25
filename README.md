@@ -29,6 +29,14 @@ Installation][installation], follow these setup instructions instead.
     ```
 
 1.  [Install a code editor][code-editor].
+
+    Here's a list of editors to consider. All of them will work for macOS,
+    Linux, or Windows. In order of biased preference:
+
+    * [Atom][] from GitHub, free.
+    * [Visual Studio Code][vsc] from Microsoft, free.
+    * [Sublime Text][], $80.
+
 1.  [Create a PythonAnywhere account][pa-account].
 
 These steps will set up your project in `${HOME}/src/djangogirls`—in other
@@ -86,19 +94,19 @@ instead:
 make runserver
 ```
 
+This will start the Django web server in a container, and will behave exactly as
+described in the tutorial.
+
 ### Skip the Following Sections
 
 Since we're simplifying the installation process, you can skip (completely or
 mostly) the following sections:
 
-* [Python installation](https://tutorial.djangogirls.org/en/python_installation/)
-* [Django installation](https://tutorial.djangogirls.org/en/django_installation/)
-* Deploy!
-
-    Skip these subsections:
-
-    * [Installing Git](https://tutorial.djangogirls.org/en/deploy/#installing-git)
-    * [Starting our Git repository](https://tutorial.djangogirls.org/en/deploy/#starting-our-git-repository)
+* [Python installation][] (skip completely)
+* [Django installation][] (skip completely)
+* [Deploy!][deploy]
+    * [Installing Git][deploy-installing-git] (skip completely)
+    * [Starting our Git repository][deploy-start-git-repo] (skip partially)
 
         Most of this section can be skipped, except at the very end where we
         save our changes:
@@ -108,7 +116,7 @@ mostly) the following sections:
         git commit -m "My Django Girls app, first commit"
         ```
 
-    * [Pushing your code to GitHub](https://tutorial.djangogirls.org/en/deploy/#pushing-your-code-to-github)
+    * [Pushing your code to GitHub][deploy-push-code] (skip partially)
 
         Since we've already cloned from a repo, we can skip most of the steps
         here. The only thing we need to do is:
@@ -117,9 +125,14 @@ mostly) the following sections:
         git push
         ```
 
+    Continue following everything as-is from [Setting up our blog on
+    PythonAnywhere][deploy-pythonanywhere].
+
 ### Minor Changes
 
-#### [Your first Django project!, Changing settings][change-settings]
+#### [Your first Django project!][first-project]
+
+##### [Changing settings][change-settings]
 
 Instead of setting:
 
@@ -137,7 +150,7 @@ ALLOWED_HOSTS = ['*']
 ## Hints on Window Management
 
 During the course of the tutorial, you'll need to juggle lots of different
-screens. This is one suggested way to arrange the different windows on your
+windows. This is one suggested way to arrange the different windows on your
 screen. You should have three applications running:
 
 1.  Command line interface console
@@ -200,15 +213,32 @@ convenience:
 * IPython: Python modules, classes, methods, functions, etc.
 * Git: `git` subcommands
 
+### Command History
 
+Both `bash` and `ipython` have command history enabled. This means you can use
+`↑` (up arrow) to access commands you've typed before, even across multiple
+sessions.
+
+
+[Atom]: https://atom.io
+[Django installation]: https://tutorial.djangogirls.org/en/django_installation/
 [Docker Store]: https://store.docker.com/search?offering=community&type=edition
 [GitHub]: https://github.com
 [IPython]: https://ipython.org
+[Python installation]: https://tutorial.djangogirls.org/en/python_installation/
+[Sublime Text]: https://www.sublimetext.com
 [change-settings]: https://tutorial.djangogirls.org/en/django_start_project/#changing-settings
 [cli-intro]: https://tutorial.djangogirls.org/en/intro_to_command_line/
 [code-editor]: https://tutorial.djangogirls.org/en/installation/#install-a-code-editor
+[deploy-installing-git]: https://tutorial.djangogirls.org/en/deploy/#installing-git
+[deploy-push-code]: https://tutorial.djangogirls.org/en/deploy/#pushing-your-code-to-github
+[deploy-pythonanywhere]: https://tutorial.djangogirls.org/en/deploy/#setting-up-our-blog-on-pythonanywhere
+[deploy-start-git-repo]: https://tutorial.djangogirls.org/en/deploy/#starting-our-git-repository
+[deploy]: https://tutorial.djangogirls.org/en/deploy/
+[first-project]: https://tutorial.djangogirls.org/en/django_start_project/
 [fork]: https://github.com/gsong/my-first-blog#fork-destination-box
 [installation]: https://tutorial.djangogirls.org/en/installation/
 [internet]: https://tutorial.djangogirls.org/en/how_the_internet_works/
 [pa-account]: https://tutorial.djangogirls.org/en/installation/#create-a-pythonanywhere-account
 [tutorial]: https://tutorial.djangogirls.org/en
+[vsc]: https://code.visualstudio.com
