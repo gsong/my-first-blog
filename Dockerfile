@@ -12,6 +12,7 @@ RUN apk add --update --no-cache \
   curl \
   git \
   make \
+  sqlite \
   tini \
   tree
 
