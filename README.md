@@ -17,7 +17,8 @@ Installation][installation], follow these setup instructions instead.
     instructions for your specific operating system.
 1.  Sign up for a free [GitHub][] account, if you don't have one already. If you
     do have an account, make sure you can login with your username and password.
-1.  [Fork this repo][fork].
+1.  Make a copy of this repo into your own account by [forking this repo][fork].
+    To do this, click on the "Fork" button at the top of this page.
 1.  Take a little time to read through "[Introduction to the command-line
     interface][cli-intro]", so you can be familiar with how to use your command
     line interface ("CLI").
