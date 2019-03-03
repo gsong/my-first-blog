@@ -25,7 +25,7 @@ Installation][installation], follow these setup instructions instead.
 1.  Open a CLI window to setup the project:
     ```sh
     cd /tmp
-    curl -OL https://raw.githubusercontent.com/gsong/my-first-blog/master/setup.sh
+    curl -OL https://cdn.jsdelivr.net/gh/gsong/my-first-blog/setup.sh
     source setup.sh
     ```
 
@@ -34,8 +34,8 @@ Installation][installation], follow these setup instructions instead.
     Here's a list of editors to consider. All of them will work for macOS,
     Linux, or Windows. In order of biased preference:
 
-    * [Atom][] from GitHub, free.
     * [Visual Studio Code][vsc] from Microsoft, free.
+    * [Atom][] from GitHub, free.
     * [Sublime Text][], $80.
 
 1.  [Create a PythonAnywhere account][pa-account].
@@ -58,7 +58,7 @@ and another to run your web server.
 
 #### Command Line
 
-Whenever you see mention of "open up a command line":
+👉 Whenever you see mention of "open up a command line":
 
 1.  Open up a CLI window
 1.  Navigate to the project directory
@@ -88,7 +88,7 @@ root@app:~/src/djangogirls$
 
 #### Run Django Web Server
 
-Whenever you see mention of `python manage.py runserver`, use the following
+👉 Whenever you see mention of `python manage.py runserver`, use the following
 instead:
 
 ```sh
@@ -178,6 +178,7 @@ Lay out your first window with the following tabs, in order:
 * [Local blog](http://localhost:8000/)
 * [Local admin](http://localhost:8000/admin)
 * PythonAnywhere bash console
+* PythonAnywhere "Web" section
 * PythonAnywhere hosted blog
 * PythonAnywhere hosted admin
 

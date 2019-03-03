@@ -1,4 +1,4 @@
-FROM python:3.6-alpine
+FROM python:3-alpine
 ENV PYTHONUNBUFFERED 1
 
 RUN echo $'source /usr/share/bash-completion/bash_completion\n\
@@ -13,15 +13,12 @@ RUN apk add --update --no-cache \
   git \
   make \
   sqlite \
-  tini \
   tree
 
 RUN mkdir -p /etc/bash_completion.d
 RUN cd /etc/bash_completion.d/ \
-  && curl -SLO https://rawgit.com/django/django/stable/1.11.x/extras/django_bash_completion
+  && curl -SLO https://cdn.jsdelivr.net/gh/django/django@stable/2.1.x/extras/django_bash_completion
 
 WORKDIR /root/src/djangogirls
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt && rm -rf /root/.cache
-
-ENTRYPOINT ["/sbin/tini", "--"]

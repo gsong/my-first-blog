@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.7'
 
 services:
   app:
@@ -7,6 +7,7 @@ services:
     hostname: app
     env_file: .env
     command: ./manage.py runserver 0.0.0.0:${APP_PORT:-8000}
+    init: true
     volumes:
       - ${HOME}/Desktop:/root/Desktop:ro
       - ./.data/services/app/bash_history:/root/.bash_history
