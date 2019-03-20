@@ -2,6 +2,8 @@
 
 set target=%1
 
+set HOME=%USERPROFILE%
+
 if /i %target%==runserver (
   docker-machine start
   docker-machine ssh default echo
