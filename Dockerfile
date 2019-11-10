@@ -1,5 +1,8 @@
-FROM python:3-alpine
+FROM python:3.7-alpine
 ENV PYTHONUNBUFFERED 1
+
+LABEL Name="Django Girls Tutorial Environment" \
+      Version="1.0"
 
 RUN echo $'source /usr/share/bash-completion/bash_completion\n\
 export HISTFILE=$HOME/.bash_history/history\n\
@@ -17,7 +20,9 @@ RUN apk add --update --no-cache \
 
 RUN mkdir -p /etc/bash_completion.d
 RUN cd /etc/bash_completion.d/ \
-  && curl -SLO https://cdn.jsdelivr.net/gh/django/django@stable/2.1.x/extras/django_bash_completion
+  && curl -SLO https://cdn.jsdelivr.net/gh/django/django@stable/2.2.x/extras/django_bash_completion
+
+RUN pip install --no-cache-dir -U pip setuptools wheel && rm -rf /root/.cache
 
 WORKDIR /root/src/djangogirls
 COPY requirements.txt requirements.txt
