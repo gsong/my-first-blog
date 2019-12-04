@@ -6,7 +6,7 @@
 #
 backcall==0.1.0           # via ipython
 decorator==4.4.1          # via ipython, traitlets
-django==2.2.7
+django==2.2.8
 ipython-genutils==0.2.0   # via traitlets
 ipython==7.9.0
 jedi==0.15.1              # via ipython
@@ -23,4 +23,4 @@ traitlets==4.3.3          # via ipython
 wcwidth==0.1.7            # via prompt-toolkit
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==41.6.0        # via ipython
+# setuptools
