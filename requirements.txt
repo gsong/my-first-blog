@@ -4,9 +4,10 @@
 #
 #    pip-compile
 #
+asgiref==3.2.3            # via django
 backcall==0.1.0           # via ipython
 decorator==4.4.1          # via ipython, traitlets
-django==2.2.8
+django==3.0
 ipython-genutils==0.2.0   # via traitlets
 ipython==7.10.1
 jedi==0.15.1              # via ipython
