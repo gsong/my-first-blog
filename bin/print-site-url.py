@@ -10,6 +10,10 @@ if len(json_src.strip()) > 0:
     addr = config.get('Driver', {}).get('IPAddress')
     if addr:
         url = "http://%s:%s/" % (addr, os.environ.get('APP_PORT', '8000'))
-        print("-" * len(url))
+        hr = "-" * len(url)
+        print("\n\n")
+        print(hr)
+        print("Your website's address is:")
+        print(hr)
         print(url)
-        print("-" * len(url))
+        print(hr)
