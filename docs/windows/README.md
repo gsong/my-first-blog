@@ -1,34 +1,62 @@
-# Docker Based Django Girls Tutorial Starter
+# Docker Based Django Girls Tutorial Starter – Windows Edition
 
 In order to simplify the setup for [Django Girls workshops][tutorial], let's use
 Docker to set up most of our development environment.
 
-
-**Caveat**: These instructions have been tested thoroughly on macOS, and should
-work just as well on most Linux based systems.
-
-Windows users should refer to [the Windows README](docs/windows/README.md).
+**Caveat**: These instructions have been tested thoroughly on Windows 10 and
+Windows 7. They should work just as well on Windows 8 and _possibly_ Windows
+Vista.
 
 ## Installation
 
 Instead of following the directions in [Django Girls Tutorial
 Installation][installation], follow these setup instructions instead.
 
-1.  Install Docker Community Edition from the [Docker Store][]. Follow the
-    instructions for your specific operating system.
+1.  Download [Docker Toolbox][docker toolbox]. The
+    download link you want is the topmost `.exe` file on the release page. It
+    should have a name like `DockerToolbox-19.03.1.exe`.
+
+1.  Run the Docker Toolbox installer. Use the default options for each
+    installation step.
+
+1.  There should now be a shortcut named **Docker Quickstart Terminal** on your
+    Desktop. Double-click that. A command prompt will appear and output a bunch
+    of text.
+
+    1.  If the Docker Quickstart Terminal seems to stop with an error message,
+        try simply closing it and running it again.
+
+    1.  At several points, you will be prompted to give the Terminal
+        permission to perform various setup tasks the first time you run it.
+
+    1.  When this setup step has completed, you should see a message similar to
+        this:
+
+        ```
+        docker is configured to use the default machine with IP 192.168.99.100
+        For help getting started, check the docs at https://docs.docker.com
+        ```
+
+    1.  Close the Docker Quickstart Terminal
+
 1.  Sign up for a free [GitHub][] account, if you don't have one already. If you
     do have an account, make sure you can login with your username and password.
+
 1.  Make a copy of this repo into your own account by [forking this repo][fork].
     To do this, click on the "Fork" button at the top of this page.
+
 1.  Take a little time to read through "[Introduction to the command-line
     interface][cli-intro]", so you can be familiar with how to use your command
     line interface ("CLI").
+
 1.  Open a CLI window to setup the project:
 
-    ```sh
-    cd /tmp
-    curl -OL https://cdn.jsdelivr.net/gh/gsong/my-first-blog/setup.sh
-    source setup.sh
+    ```
+    cd %TMP%
+
+    powershell -command "$url='https://gist.githubusercontent.com/mike-ce/8e9a9293990567474e69fbaa423b8e84/raw/c9071c4227bd1098d727b51c3e68e8fa1e8703a5/setup.cmd';$dest='setup.cmd';echo `n`n'Downloading. Please wait...';(New-Object System.Net.WebClient).DownloadFile($url, $dest); echo `n`n'Done!'"
+
+    setup.cmd
     ```
 
 1.  [Install a code editor][code-editor].
@@ -42,8 +70,8 @@ Installation][installation], follow these setup instructions instead.
 
 1.  [Create a PythonAnywhere account][pa-account].
 
-These steps will set up your project in `${HOME}/src/djangogirls`—in other
-words, the `src/djangogirls` subdirectory in your home directory.
+These steps will set up your project in `%USERPROFILE%\src\djangogirls`—in other
+words, the `src\djangogirls` subdirectory in your user directory.
 
 🎉 You're ready to start the tutorial! Continue with [How the Internet
 works][internet]. Note some minor changes you'll have to keep in mind as you
@@ -64,8 +92,8 @@ and another to run your web server.
 1.  Open up a CLI window
 1.  Navigate to the project directory
 
-    ```sh
-    cd ${HOME}/src/djangogirls
+    ```
+    cd %USERPROFILE%\src\djangogirls
     ```
 
 1.  Start an interactive container:
@@ -97,8 +125,11 @@ instead:
 make runserver
 ```
 
-This will start the Django web server in a container, and will behave exactly as
-described in the tutorial.
+This will start the Django web server in a container. To visit the web site
+hosted by the web server go to the URL displayed when this command is run.
+
+The `make runserver` command will otherwise behave exactly as described in the
+tutorial.
 
 ### Skip the Following Sections
 
@@ -192,7 +223,7 @@ Use this window for any research you need to do.
 
 ### Editor
 
-Make sure your editor is rooted to `${HOME}/src/djangogirls` for convenience.
+Make sure your editor is rooted to `%USERPROFILE%\src\djangogirls` for convenience.
 Each editor will have its own way of accomplishing this.
 
 ## Enhancements
@@ -223,12 +254,6 @@ Both `bash` and `ipython` have command history enabled. This means you can use
 sessions.
 
 [atom]: https://atom.io
-[django installation]: https://tutorial.djangogirls.org/en/django_installation/
-[docker store]: https://store.docker.com/search?offering=community&type=edition
-[github]: https://github.com
-[ipython]: https://ipython.org
-[python installation]: https://tutorial.djangogirls.org/en/python_installation/
-[sublime text]: https://www.sublimetext.com
 [change-settings]: https://tutorial.djangogirls.org/en/django_start_project/#changing-settings
 [cli-intro]: https://tutorial.djangogirls.org/en/intro_to_command_line/
 [code-editor]: https://tutorial.djangogirls.org/en/installation/#install-a-code-editor
@@ -237,10 +262,16 @@ sessions.
 [deploy-pythonanywhere]: https://tutorial.djangogirls.org/en/deploy/#setting-up-our-blog-on-pythonanywhere
 [deploy-start-git-repo]: https://tutorial.djangogirls.org/en/deploy/#starting-our-git-repository
 [deploy]: https://tutorial.djangogirls.org/en/deploy/
+[django installation]: https://tutorial.djangogirls.org/en/django_installation/
+[docker toolbox]: https://github.com/docker/toolbox/releases
 [first-project]: https://tutorial.djangogirls.org/en/django_start_project/
 [fork]: https://github.com/gsong/my-first-blog#fork-destination-box
+[github]: https://github.com
 [installation]: https://tutorial.djangogirls.org/en/installation/
 [internet]: https://tutorial.djangogirls.org/en/how_the_internet_works/
+[ipython]: https://ipython.org
 [pa-account]: https://tutorial.djangogirls.org/en/installation/#create-a-pythonanywhere-account
+[python installation]: https://tutorial.djangogirls.org/en/python_installation/
+[sublime text]: https://www.sublimetext.com
 [tutorial]: https://tutorial.djangogirls.org/en
 [vsc]: https://code.visualstudio.com
