@@ -25,5 +25,5 @@ RUN cd /etc/bash_completion.d/ \
 RUN pip install --no-cache-dir -U pip setuptools wheel && rm -rf /root/.cache
 
 WORKDIR /root/src/djangogirls
-COPY requirements.txt requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt && rm -rf /root/.cache
+COPY dev.txt dev.txt
+RUN pip install --no-cache-dir -r dev.txt && rm -rf /root/.cache
