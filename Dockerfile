@@ -13,10 +13,15 @@ RUN apk add --update --no-cache \
   bash \
   bash-completion \
   curl \
+  gcc \
   git \
   make \
+  musl-dev \
   sqlite \
   tree
+
+RUN apk add --update --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+  watchman
 
 RUN mkdir -p /etc/bash_completion.d
 RUN cd /etc/bash_completion.d/ \
