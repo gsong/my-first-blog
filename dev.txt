@@ -4,9 +4,10 @@
 #
 #    pip-compile dev.in
 #
+asgiref==3.2.10           # via django
 backcall==0.2.0           # via ipython
 decorator==4.4.2          # via ipython
-django==2.2.16            # via -r requirements.in
+django==3.1.1             # via -r requirements.in
 ipython-genutils==0.2.0   # via traitlets
 ipython==7.18.1           # via -r dev.in
 jedi==0.17.2              # via ipython
