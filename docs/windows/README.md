@@ -265,7 +265,7 @@ sessions.
 [django installation]: https://tutorial.djangogirls.org/en/django_installation/
 [docker toolbox]: https://github.com/docker/toolbox/releases
 [first-project]: https://tutorial.djangogirls.org/en/django_start_project/
-[fork]: https://github.com/gsong/my-first-blog#fork-destination-box
+[fork]: https://github.com/gsong/my-first-blog/fork
 [github]: https://github.com
 [installation]: https://tutorial.djangogirls.org/en/installation/
 [internet]: https://tutorial.djangogirls.org/en/how_the_internet_works/

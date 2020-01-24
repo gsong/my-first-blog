@@ -3,7 +3,6 @@
 In order to simplify the setup for [Django Girls workshops][tutorial], let's use
 Docker to set up most of our development environment.
 
-
 **Caveat**: These instructions have been tested thoroughly on macOS, and should
 work just as well on most Linux based systems.
 
@@ -14,8 +13,8 @@ Windows users should refer to [the Windows README](docs/windows/README.md).
 Instead of following the directions in [Django Girls Tutorial
 Installation][installation], follow these setup instructions instead.
 
-1.  Install Docker Community Edition from the [Docker Store][]. Follow the
-    instructions for your specific operating system.
+1.  [Install Docker][docker platforms]—follow the instructions for your specific
+    operating system.
 1.  Sign up for a free [GitHub][] account, if you don't have one already. If you
     do have an account, make sure you can login with your username and password.
 1.  Make a copy of this repo into your own account by [forking this repo][fork].
@@ -223,12 +222,6 @@ Both `bash` and `ipython` have command history enabled. This means you can use
 sessions.
 
 [atom]: https://atom.io
-[django installation]: https://tutorial.djangogirls.org/en/django_installation/
-[docker store]: https://store.docker.com/search?offering=community&type=edition
-[github]: https://github.com
-[ipython]: https://ipython.org
-[python installation]: https://tutorial.djangogirls.org/en/python_installation/
-[sublime text]: https://www.sublimetext.com
 [change-settings]: https://tutorial.djangogirls.org/en/django_start_project/#changing-settings
 [cli-intro]: https://tutorial.djangogirls.org/en/intro_to_command_line/
 [code-editor]: https://tutorial.djangogirls.org/en/installation/#install-a-code-editor
@@ -237,10 +230,16 @@ sessions.
 [deploy-pythonanywhere]: https://tutorial.djangogirls.org/en/deploy/#setting-up-our-blog-on-pythonanywhere
 [deploy-start-git-repo]: https://tutorial.djangogirls.org/en/deploy/#starting-our-git-repository
 [deploy]: https://tutorial.djangogirls.org/en/deploy/
+[django installation]: https://tutorial.djangogirls.org/en/django_installation/
+[docker platforms]: https://docs.docker.com/install/#supported-platforms
 [first-project]: https://tutorial.djangogirls.org/en/django_start_project/
-[fork]: https://github.com/gsong/my-first-blog#fork-destination-box
+[fork]: https://github.com/gsong/my-first-blog/fork
+[github]: https://github.com
 [installation]: https://tutorial.djangogirls.org/en/installation/
 [internet]: https://tutorial.djangogirls.org/en/how_the_internet_works/
+[ipython]: https://ipython.org
 [pa-account]: https://tutorial.djangogirls.org/en/installation/#create-a-pythonanywhere-account
+[python installation]: https://tutorial.djangogirls.org/en/python_installation/
+[sublime text]: https://www.sublimetext.com
 [tutorial]: https://tutorial.djangogirls.org/en
 [vsc]: https://code.visualstudio.com
