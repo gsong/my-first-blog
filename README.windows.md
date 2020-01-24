@@ -71,8 +71,8 @@ bunch of text.
 
 1.  [Create a PythonAnywhere account][pa-account].
 
-These steps will set up your project in `%USERPROFILE%/src/djangogirls`—in other
-words, the `src/djangogirls` subdirectory in your user directory.
+These steps will set up your project in `%USERPROFILE%\src\djangogirls`—in other
+words, the `src\djangogirls` subdirectory in your user directory.
 
 🎉 You're ready to start the tutorial! Continue with [How the Internet
 works][internet]. Note some minor changes you'll have to keep in mind as you
@@ -94,7 +94,7 @@ and another to run your web server.
 1.  Open up a CLI window
 1.  Navigate to the project directory
     ```
-    cd %USERPROFILE%/src/djangogirls
+    cd %USERPROFILE%\src\djangogirls
     ```
 
 1.  Start an interactive container:
@@ -224,7 +224,7 @@ Use this window for any research you need to do.
 
 ### Editor
 
-Make sure your editor is rooted to `${HOME}/src/djangogirls` for convenience.
+Make sure your editor is rooted to `%USERPROFILE%\src\djangogirls` for convenience.
 Each editor will have its own way of accomplishing this.
 
 
