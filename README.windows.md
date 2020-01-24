@@ -14,8 +14,6 @@ Instead of following the directions in [Django Girls Tutorial
 Installation][installation], follow these setup instructions instead.
 
 
-### Install Docker
-
 1.  Download [Docker Toolbox][Docker Toolbox]. The
 download link you want is the topmost `.exe` file on the release page. It
 should have a name like `DockerToolbox-19.03.1.exe`.
