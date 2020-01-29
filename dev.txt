@@ -10,11 +10,11 @@ decorator==4.4.1          # via ipython, traitlets
 django==2.2.9
 ipython-genutils==0.2.0   # via traitlets
 ipython==7.11.1
-jedi==0.15.2              # via ipython
-parso==0.5.2              # via jedi
+jedi==0.16.0              # via ipython
+parso==0.6.0              # via jedi
 pexpect==4.8.0            # via ipython
 pickleshare==0.7.5        # via ipython
-prompt-toolkit==3.0.2     # via ipython
+prompt-toolkit==3.0.3     # via ipython
 ptyprocess==0.6.0         # via pexpect
 pygments==2.5.2           # via ipython
 pytz==2019.3              # via django
