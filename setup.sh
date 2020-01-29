@@ -23,4 +23,7 @@ docker run --rm -v "${PWD}":/root/src/djangogirls \
 cat << EOF > .env
 GITHUB_USERNAME=${github_username}
 GITHUB_EMAIL=${github_email}
+USER=${USER}
+UID=${UID}
+GID=${GID}
 EOF

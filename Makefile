@@ -1,6 +1,7 @@
 .DEFAULT_GOAL := help
 
 include Makefiles/*.mk
+include .env
 
 # Generates a help message. Borrowed from https://github.com/pydanny/cookiecutter-djangopackage.
 help: ## Display this help message
@@ -13,7 +14,7 @@ runserver: ## Start Django development server
 	docker-compose up
 
 cli: ## Start development command line interface
-	docker-compose run --rm app bin/cli-command.sh
+	docker-compose run -e "UID=$(UID)" -e "GID=$(GID)" -e "USER=$(USER)" --rm app bin/cli-command.sh
 
 build: # Build image
 	docker pull python:3.6-alpine
