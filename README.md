@@ -22,7 +22,7 @@ Installation][installation], follow these setup instructions instead.
 1.  Take a little time to read through "[Introduction to the command-line
     interface][cli-intro]", so you can be familiar with how to use your command
     line interface ("CLI").
-1.  Open a CLI window to setup the project:
+1.  Open a CLI window (also known as terminal) to setup the project:
 
     ```sh
     cd /tmp
@@ -84,7 +84,7 @@ Instead of the prompt you see in the tutorial instructions:
 You'll instead see:
 
 ```sh
-root@app:~/src/djangogirls$
+${YOUR_USERNAME}@app:~/src/djangogirls$
 ```
 
 #### Run Django Web Server
@@ -159,7 +159,7 @@ screen. You should have three applications running:
 2.  Browser
 3.  Editor
 
-### CLI Console
+### CLI Console (aka Terminal)
 
 You should have two windows or tabs for working with the command line. Keep one
 dedicated for typing and running commands, and another one for running the
