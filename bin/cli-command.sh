@@ -8,4 +8,7 @@ git config --global user.email "${GITHUB_EMAIL}"
 git config --global credential.helper "cache --timeout=${GIT_CREDENTIAL_CACHE_TIMEOUT}"
 git config --global push.default simple
 
-exec /bin/bash
+adduser -u ${UID} -g ${GID} -h /root -D ${USER}
+
+exec su ${USER} -c /bin/bash
+exit $?
