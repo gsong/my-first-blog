@@ -24,7 +24,9 @@ Installation][installation], follow these setup instructions instead.
     of text.
 
     1.  If the Docker Quickstart Terminal seems to stop with an error message,
-        try simply closing it and running it again.
+        try simply closing it and running it again. If that doesn't work it's
+        possible you'll need to enable something called "Virtualization" on
+        your computer. Ask your coach for help!
 
     1.  At several points, you will be prompted to give the Terminal
         permission to perform various setup tasks the first time you run it.
