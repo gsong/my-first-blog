@@ -8,7 +8,13 @@ git config --global user.email "${GITHUB_EMAIL}"
 git config --global credential.helper "cache --timeout=${GIT_CREDENTIAL_CACHE_TIMEOUT}"
 git config --global push.default simple
 
-adduser -u ${UID} -g ${GID} -h /root -D ${USER}
+if [ $USER = root ]; then
+  # If $USER is set to "root", which it will be when the host OS is Windows,
+  # just run without changing users.
+  exec /bin/bash
+else
+  adduser -u ${UID} -g ${GID} -h /root -D ${USER}
+  exec su ${USER} -c /bin/bash
+fi
 
-exec su ${USER} -c /bin/bash
 exit $?
