@@ -14,7 +14,8 @@ Instead of following the directions in [Django Girls Tutorial
 Installation][installation], follow these setup instructions instead.
 
 1.  [Install Docker][docker platforms]—follow the instructions for your specific
-    operating system.
+    operating system. If installing on Ubuntu, see "Additional notes for
+    Ubuntu" section below.
 1.  Sign up for a free [GitHub][] account, if you don't have one already. If you
     do have an account, make sure you can login with your username and password.
 1.  Make a copy of this repo into your own account by [forking this repo][fork].
@@ -47,6 +48,17 @@ words, the `src/djangogirls` subdirectory in your home directory.
 🎉 You're ready to start the tutorial! Continue with [How the Internet
 works][internet]. Note some minor changes you'll have to keep in mind as you
 follow the tutorial.
+
+### Additional notes for Ubuntu
+
+* If you're installing Docker on Ubuntu 19.10 Eoan, in the command to add the
+  Docker repository to your system, change `$(lsb_release -cs)` to `disco`.
+  This is because Docker does not have official repositories for Eoan yet, so we
+  use the repository for the previous version (Disco).
+* Make sure to follow the `Manage Docker as a non-root user` steps in
+  [Post installation for Linux][] instructions, so that you can run docker
+  without `sudo`.
+* Make sure to also install [docker-compose][] before running `make cli`.
 
 ## Changes from the Tutorial
 
@@ -237,6 +249,7 @@ sessions.
 [deploy-start-git-repo]: https://tutorial.djangogirls.org/en/deploy/#starting-our-git-repository
 [deploy]: https://tutorial.djangogirls.org/en/deploy/
 [django installation]: https://tutorial.djangogirls.org/en/django_installation/
+[docker-compose]: https://docs.docker.com/compose/install/
 [docker platforms]: https://docs.docker.com/install/#supported-platforms
 [first-project]: https://tutorial.djangogirls.org/en/django_start_project/
 [fork]: https://github.com/gsong/my-first-blog/fork
@@ -245,6 +258,7 @@ sessions.
 [internet]: https://tutorial.djangogirls.org/en/how_the_internet_works/
 [ipython]: https://ipython.org
 [pa-account]: https://tutorial.djangogirls.org/en/installation/#create-a-pythonanywhere-account
+[post installation for Linux]: https://docs.docker.com/install/linux/linux-postinstall/
 [python installation]: https://tutorial.djangogirls.org/en/python_installation/
 [sublime text]: https://www.sublimetext.com
 [tutorial]: https://tutorial.djangogirls.org/en
