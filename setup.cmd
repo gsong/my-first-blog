@@ -27,4 +27,5 @@ docker run --rm -v %current_dir%:/root/src/djangogirls gsong/djangogirls-app git
 (
   echo GITHUB_USERNAME=%github_username%
   echo GITHUB_EMAIL=%github_email%
+  echo USER=root
 ) > .env
