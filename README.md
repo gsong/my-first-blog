@@ -14,8 +14,9 @@ Instead of following the directions in [Django Girls Tutorial
 Installation][installation], follow these setup instructions instead.
 
 1.  [Install Docker][docker platforms]—follow the instructions for your specific
-    operating system. If installing on Ubuntu, see "Additional notes for
-    Ubuntu" section below.
+    operating system. If installing on Ubuntu, you can use the
+    install-docker-ubuntu.sh script included in this repository, or see
+    [Additional Notes for Ubuntu](#additional-notes-for-ubuntu) section below.
 1.  Sign up for a free [GitHub][] account, if you don't have one already. If you
     do have an account, make sure you can login with your username and password.
 1.  Make a copy of this repo into your own account by [forking this repo][fork].
@@ -49,7 +50,7 @@ words, the `src/djangogirls` subdirectory in your home directory.
 works][internet]. Note some minor changes you'll have to keep in mind as you
 follow the tutorial.
 
-### Additional notes for Ubuntu
+### Additional Notes for Ubuntu
 
 * If you're installing Docker on Ubuntu 19.10 Eoan, in the command to add the
   Docker repository to your system, change `$(lsb_release -cs)` to `disco`.
@@ -60,7 +61,7 @@ follow the tutorial.
   without `sudo`.
 * Make sure to also install [docker-compose][] before running `make cli`.
 
-## Changes from the Tutorial
+## Changes From the Tutorial
 
 ### Command Line Operations
 
@@ -115,7 +116,8 @@ described in the tutorial.
 
 If you get an error message, make sure that you're not still in the docker
 container after running `make cli`. If you are, you can either open a new
-command line tab to run `make runserver` in, or exit `make cli` with `exit`.
+command line tab to run `make runserver` in, or first exit `make cli` with
+`exit`.
 
 ### Skip the Following Sections
 
@@ -249,8 +251,8 @@ sessions.
 [deploy-start-git-repo]: https://tutorial.djangogirls.org/en/deploy/#starting-our-git-repository
 [deploy]: https://tutorial.djangogirls.org/en/deploy/
 [django installation]: https://tutorial.djangogirls.org/en/django_installation/
-[docker-compose]: https://docs.docker.com/compose/install/
 [docker platforms]: https://docs.docker.com/install/#supported-platforms
+[docker-compose]: https://docs.docker.com/compose/install/
 [first-project]: https://tutorial.djangogirls.org/en/django_start_project/
 [fork]: https://github.com/gsong/my-first-blog/fork
 [github]: https://github.com
