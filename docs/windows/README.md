@@ -54,7 +54,7 @@ Installation][installation], follow these setup instructions instead.
     ```
     cd %TMP%
 
-    powershell -command "$url='https://gist.githubusercontent.com/mike-ce/8e9a9293990567474e69fbaa423b8e84/raw/c9071c4227bd1098d727b51c3e68e8fa1e8703a5/setup.cmd';$dest='setup.cmd';echo `n`n'Downloading. Please wait...';(New-Object System.Net.WebClient).DownloadFile($url, $dest); echo `n`n'Done!'"
+    powershell -command "$url='https://raw.githubusercontent.com/gsong/my-first-blog/master/setup.cmd';$dest='setup.cmd';echo `n`n'Downloading. Please wait...';(New-Object System.Net.WebClient).DownloadFile($url, $dest); echo `n`n'Done!'"
 
     setup.cmd
     ```
