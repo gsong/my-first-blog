@@ -7,13 +7,19 @@ help: ## Display this help message
 	@echo "Please use \`make <target>' where <target> is one of the following:"
 	@perl -nle'print $& if m{^[\.a-zA-Z_-]+:.*?## .*$$}' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m  %-25s\033[0m %s\n", $$1, $$2}'
 
+# This target just checks if you're executing make inside the container. If
+# you are inside the container, it fails with a hopefully helpful error
+# message. Otherwise, it silently succeeds and executes the intended target.
+assert-not-container:
+	@test -f /.dockerenv && printf "\nOops. That won't work inside a container.\nEither 'exit' this container first, or try again using a new terminal window.\n\n" && exit 1 || true
+
 # Tasks to be run in developer shell
 ## General Docker operations
-runserver: ## Start Django development server
-	docker-compose up
+runserver: assert-not-container ## Start Django development server
+	@docker-compose up
 
-cli: ## Start development command line interface
-	docker-compose run --rm app bin/cli-command.sh
+cli: assert-not-container ## Start development command line interface
+	@docker-compose run --rm app bin/cli-command.sh
 
 build: # Build image
 	docker pull python:3.6-alpine
