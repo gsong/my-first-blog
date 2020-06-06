@@ -4,10 +4,9 @@
 #
 #    pip-compile dev.in
 #
-appnope==0.1.0            # via ipython
 backcall==0.1.0           # via ipython
 decorator==4.4.2          # via ipython, traitlets
-django==2.2.11            # via -r requirements.in
+django==2.2.13            # via -r requirements.in
 ipython-genutils==0.2.0   # via traitlets
 ipython==7.13.0           # via -r dev.in
 jedi==0.16.0              # via ipython
